@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="km">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sincere Heart Distribution | SHD</title>
+<meta name="description" content="Sincere Heart Distribution (SHD) — Warehousing, distribution and fleet logistics in Cambodia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+Khmer:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0f2a47; --navy-2:#173a5e; --accent:#e4572e; --accent-2:#ff7a50;
+    --bg:#f6f8fb; --card:#ffffff; --text:#1d2733; --muted:#5b6b7c; --line:#e2e8f0;
+    --radius:14px; --max:1140px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter","Noto Sans Khmer",system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+  body.km{font-family:"Noto Sans Khmer","Inter",system-ui,sans-serif}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:rgba(15,42,71,.97);backdrop-filter:blur(6px)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:1.15rem}
+  .logo-mark{width:38px;height:38px;border-radius:10px;background:var(--accent);display:grid;place-items:center}
+  .logo-mark svg{width:22px;height:22px}
+  .menu{display:flex;gap:26px;align-items:center}
+  .menu a{color:#cfdbe8;font-size:.95rem;font-weight:600}
+  .menu a:hover{color:#fff}
+  .lang{border:1px solid #5f7c99;color:#fff;background:transparent;border-radius:999px;padding:6px 14px;font-weight:600;cursor:pointer;font-family:inherit}
+  .lang:hover{background:var(--navy-2)}
+  .burger{display:none;background:none;border:0;color:#fff;cursor:pointer}
+  @media (max-width:820px){
+    .menu{display:none;position:absolute;top:68px;left:0;right:0;background:var(--navy);flex-direction:column;padding:18px 20px;gap:14px;align-items:flex-start}
+    .menu.open{display:flex}
+    .burger{display:block}
+  }
+
+  /* Hero */
+  .hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 60%,#23507c 100%);color:#fff;padding:96px 0 110px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-120px;bottom:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(228,87,46,.35),transparent 70%)}
+  .hero h1{font-size:clamp(2rem,4.6vw,3.3rem);line-height:1.25;max-width:760px;font-weight:800}
+  .hero p{margin-top:18px;max-width:620px;color:#c9d6e4;font-size:1.1rem}
+  .cta{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:13px 26px;border-radius:10px;font-weight:700;transition:.2s}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:var(--accent-2)}
+  .btn-ghost{border:1.5px solid #8aa3bd;color:#fff}
+  .btn-ghost:hover{background:rgba(255,255,255,.08)}
+
+  /* Sections */
+  section{padding:84px 0}
+  .eyebrow{color:var(--accent);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.85rem}
+  h2{font-size:clamp(1.6rem,3vw,2.2rem);margin:8px 0 14px;color:var(--navy);line-height:1.35}
+  .lead{color:var(--muted);max-width:680px}
+  .grid{display:grid;gap:22px;margin-top:40px}
+  .g4{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .g3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:.2s}
+  .card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(15,42,71,.08)}
+  .icon{width:50px;height:50px;border-radius:12px;background:#fdeee9;display:grid;place-items:center;margin-bottom:16px}
+  .icon svg{width:26px;height:26px;stroke:var(--accent)}
+  .card h3{color:var(--navy);font-size:1.15rem;margin-bottom:6px}
+  .card p{color:var(--muted);font-size:.96rem}
+
+  /* About */
+  .about{background:#fff}
+  .about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:center}
+  @media (max-width:820px){.about-grid{grid-template-columns:1fr}}
+  .checks{list-style:none;margin-top:22px;display:grid;gap:12px}
+  .checks li{display:flex;gap:10px;align-items:flex-start}
+  .checks li::before{content:"✓";color:#fff;background:var(--accent);border-radius:50%;min-width:22px;height:22px;display:grid;place-items:center;font-size:.8rem;margin-top:4px}
+  .panel{background:linear-gradient(135deg,var(--navy),var(--navy-2));border-radius:18px;color:#fff;padding:36px}
+  .panel h3{font-size:1.3rem;margin-bottom:18px}
+  .panel .row{display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.15);padding:12px 0;gap:12px}
+  .panel .row:last-child{border:0}
+  .panel .row span:last-child{color:#ffb49c;font-weight:700;text-align:right}
+
+  /* Process */
+  .steps{counter-reset:s}
+  .step{position:relative;padding-top:56px}
+  .step::before{counter-increment:s;content:counter(s);position:absolute;top:22px;left:28px;width:40px;height:40px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800}
+  .step h3{margin-top:14px}
+
+  /* Contact */
+  .contact{background:var(--navy);color:#fff}
+  .contact h2{color:#fff}
+  .contact .lead{color:#b9c9da}
+  .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;margin-top:36px}
+  @media (max-width:820px){.contact-grid{grid-template-columns:1fr}}
+  .info div{display:flex;gap:12px;margin-bottom:18px;align-items:flex-start}
+  .info svg{width:22px;height:22px;stroke:var(--accent-2);flex-shrink:0;margin-top:4px}
+  form{background:#fff;border-radius:var(--radius);padding:28px;color:var(--text);display:grid;gap:14px}
+  label{font-weight:600;font-size:.9rem}
+  input,textarea,select{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:8px;font:inherit;margin-top:4px}
+  textarea{min-height:110px;resize:vertical}
+  form .btn{border:0;cursor:pointer;font:inherit;font-weight:700}
+  .note{font-size:.85rem;color:var(--muted)}
+
+  footer{background:#0a1e33;color:#8ea3b8;padding:26px 0;font-size:.9rem;text-align:center}
+</style>
+</head>
+<body class="km">
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>
+      SHD
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#services" data-i18n="nav_services"></a>
+      <a href="#about" data-i18n="nav_about"></a>
+      <a href="#process" data-i18n="nav_process"></a>
+      <a href="#contact" data-i18n="nav_contact"></a>
+      <button class="lang" id="langBtn">EN</button>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow" style="color:#ffb49c">Sincere Heart Distribution</div>
+      <h1 data-i18n="hero_title"></h1>
+      <p data-i18n="hero_sub"></p>
+      <div class="cta">
+        <a href="#contact" class="btn btn-primary" data-i18n="hero_cta1"></a>
+        <a href="#services" class="btn btn-ghost" data-i18n="hero_cta2"></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="eyebrow" data-i18n="svc_eyebrow"></div>
+      <h2 data-i18n="svc_title"></h2>
+      <p class="lead" data-i18n="svc_lead"></p>
+      <div class="grid g4">
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M7 21v-8h10v8"/><path d="M7 17h10"/></svg></div>
+          <h3 data-i18n="svc1_t"></h3><p data-i18n="svc1_d"></p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+          <h3 data-i18n="svc2_t"></h3><p data-i18n="svc2_d"></p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8l-9-5-9 5v8l9 5z"/><path d="M3.3 7 12 12l8.7-5M12 22V12"/></svg></div>
+          <h3 data-i18n="svc3_t"></h3><p data-i18n="svc3_d"></p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></div>
+          <h3 data-i18n="svc4_t"></h3><p data-i18n="svc4_d"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="wrap about-grid">
+      <div>
+        <div class="eyebrow" data-i18n="ab_eyebrow"></div>
+        <h2 data-i18n="ab_title"></h2>
+        <p class="lead" data-i18n="ab_lead"></p>
+        <ul class="checks">
+          <li data-i18n="ab_c1"></li>
+          <li data-i18n="ab_c2"></li>
+          <li data-i18n="ab_c3"></li>
+          <li data-i18n="ab_c4"></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3 data-i18n="kpi_title"></h3>
+        <div class="row"><span data-i18n="kpi1"></span><span data-i18n="kpi1v"></span></div>
+        <div class="row"><span data-i18n="kpi2"></span><span data-i18n="kpi2v"></span></div>
+        <div class="row"><span data-i18n="kpi3"></span><span data-i18n="kpi3v"></span></div>
+        <div class="row"><span data-i18n="kpi4"></span><span data-i18n="kpi4v"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="eyebrow" data-i18n="pr_eyebrow"></div>
+      <h2 data-i18n="pr_title"></h2>
+      <div class="grid g4 steps">
+        <div class="card step"><h3 data-i18n="pr1_t"></h3><p data-i18n="pr1_d"></p></div>
+        <div class="card step"><h3 data-i18n="pr2_t"></h3><p data-i18n="pr2_d"></p></div>
+        <div class="card step"><h3 data-i18n="pr3_t"></h3><p data-i18n="pr3_d"></p></div>
+        <div class="card step"><h3 data-i18n="pr4_t"></h3><p data-i18n="pr4_d"></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="eyebrow" data-i18n="ct_eyebrow"></div>
+      <h2 data-i18n="ct_title"></h2>
+      <p class="lead" data-i18n="ct_lead"></p>
+      <div class="contact-grid">
+        <div class="info">
+          <!-- TODO: ដាក់ព័ត៌មានទំនាក់ទំនងពិតប្រាកដរបស់ SHD នៅទីនេះ -->
+          <div><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><span data-i18n="ct_addr"></span></div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span>+855 (0) XX XXX XXX</span></div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg><span>info@your-domain.com</span></div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span data-i18n="ct_hours"></span></div>
+        </div>
+        <form id="quoteForm">
+          <div><label data-i18n="f_name"></label><input required></div>
+          <div><label data-i18n="f_company"></label><input></div>
+          <div><label data-i18n="f_phone"></label><input type="tel" required></div>
+          <div><label data-i18n="f_service"></label>
+            <select>
+              <option data-i18n="svc1_t"></option><option data-i18n="svc2_t"></option>
+              <option data-i18n="svc3_t"></option><option data-i18n="svc4_t"></option>
+            </select>
+          </div>
+          <div><label data-i18n="f_msg"></label><textarea></textarea></div>
+          <button class="btn btn-primary" type="submit" data-i18n="f_send"></button>
+          <p class="note" id="formNote" data-i18n="f_note"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="yr"></span> Sincere Heart Distribution (SHD). <span data-i18n="ft"></span></div>
+</footer>
+
+<script>
+const T = {
+  km: {
+    nav_services:"សេវាកម្ម", nav_about:"អំពីយើង", nav_process:"ដំណើរការ", nav_contact:"ទំនាក់ទំនង",
+    hero_title:"ដៃគូភស្តុភារដែលអាចទុកចិត្តបាន សម្រាប់ការចែកចាយទំហំធំ",
+    hero_sub:"SHD ផ្តល់សេវាឃ្លាំង ការចែកចាយ និងការគ្រប់គ្រងកងយានយន្ត ដោយផ្អែកលើ SOP ច្បាស់លាស់ និងការសម្រេចចិត្តតាមទិន្នន័យ។",
+    hero_cta1:"ស្នើសុំតម្លៃ", hero_cta2:"មើលសេវាកម្ម",
+    svc_eyebrow:"សេវាកម្មរបស់យើង", svc_title:"ដំណោះស្រាយភស្តុភារពេញលេញ",
+    svc_lead:"ចាប់ពីការទទួលទំនិញចូលឃ្លាំង រហូតដល់ការដឹកជញ្ជូនដល់អតិថិជន យើងគ្រប់គ្រងគ្រប់ដំណាក់កាលនៃខ្សែសង្វាក់ផ្គត់ផ្គង់។",
+    svc1_t:"សេវាឃ្លាំង", svc1_d:"ការទទួល ការរក្សាទុក និង picking/packing ជាមួយប្លង់ឃ្លាំងដែលធ្វើឱ្យប្រសើរសម្រាប់ throughput ខ្ពស់។",
+    svc2_t:"ការដឹកជញ្ជូន និងកងយានយន្ត", svc2_d:"ការរៀបចំផ្លូវ (route optimization) និងការដឹកជញ្ជូនទាន់ពេលវេលាទៅកាន់អតិថិជនរបស់អ្នក។",
+    svc3_t:"ការចែកចាយទំហំធំ", svc3_d:"សមត្ថភាពដោះស្រាយការបញ្ជាទិញបរិមាណច្រើន ជាមួយដំណើរការស្តង់ដារ និងការត្រួតពិនិត្យគុណភាព។",
+    svc4_t:"ការគ្រប់គ្រងស្តុក", svc4_d:"ការតាមដានស្តុក cycle count និងរបាយការណ៍ KPI ដើម្បីកាត់បន្ថយការខាតបង់ និងការខ្វះស្តុក។",
+    ab_eyebrow:"អំពី SHD", ab_title:"ប្រតិបត្តិការដែលបង្កើតឡើងលើប្រព័ន្ធ និងទិន្នន័យ",
+    ab_lead:"Sincere Heart Distribution ផ្តោតលើប្រសិទ្ធភាពប្រតិបត្តិការ ការកាត់បន្ថយថ្លៃដើម និងប្រព័ន្ធដែលអាចពង្រីកបាន ដើម្បីជួយឱ្យអាជីវកម្មរបស់អ្នករីកចម្រើន។",
+    ab_c1:"SOP ស្តង់ដារសម្រាប់គ្រប់ដំណើរការឃ្លាំង និងការដឹកជញ្ជូន",
+    ab_c2:"ការតាមដាន KPI ប្រចាំសប្តាហ៍ និងការវិភាគគម្លាត",
+    ab_c3:"ក្រុមការងារដែលបានបណ្តុះបណ្តាល និងមានការវាយតម្លៃលទ្ធផលការងារ",
+    ab_c4:"ការកែលម្អដំណើរការជាបន្តបន្ទាប់ ដើម្បីកាត់បន្ថយថ្លៃដើម",
+    kpi_title:"KPI ដែលយើងតាមដានជាប្រចាំ",
+    kpi1:"ភាពត្រឹមត្រូវនៃការបញ្ជាទិញ", kpi1v:"Order Accuracy",
+    kpi2:"ការដឹកជញ្ជូនទាន់ពេល", kpi2v:"On-Time Delivery",
+    kpi3:"ភាពត្រឹមត្រូវនៃស្តុក", kpi3v:"Inventory Accuracy",
+    kpi4:"ផលិតភាពឃ្លាំង", kpi4v:"Throughput / Hour",
+    pr_eyebrow:"របៀបដែលយើងធ្វើការ", pr_title:"ដំណើរការ 4 ជំហាន",
+    pr1_t:"ទទួលទំនិញ", pr1_d:"ពិនិត្យ រាប់ និងកត់ត្រាទំនិញចូលក្នុងប្រព័ន្ធ។",
+    pr2_t:"រក្សាទុក", pr2_d:"ដាក់ទំនិញតាមទីតាំងដែលកំណត់ ដើម្បីងាយស្រួលក្នុងការ picking។",
+    pr3_t:"រៀបចំការបញ្ជាទិញ", pr3_d:"Picking, packing និងត្រួតពិនិត្យគុណភាពមុនពេលបញ្ចេញ។",
+    pr4_t:"ដឹកជញ្ជូន", pr4_d:"រៀបចំផ្លូវល្អបំផុត និងដឹកជញ្ជូនដល់ទីតាំងអតិថិជន។",
+    ct_eyebrow:"ទំនាក់ទំនង", ct_title:"ចាប់ផ្តើមធ្វើការជាមួយ SHD",
+    ct_lead:"ប្រាប់យើងពីតម្រូវការរបស់អ្នក ហើយក្រុមការងាររបស់យើងនឹងទាក់ទងទៅអ្នកវិញ។",
+    ct_addr:"ភ្នំពេញ ព្រះរាជាណាចក្រកម្ពុជា", ct_hours:"ច័ន្ទ – សៅរ៍ ម៉ោង 7:30 – 17:30",
+    f_name:"ឈ្មោះ", f_company:"ក្រុមហ៊ុន", f_phone:"លេខទូរស័ព្ទ", f_service:"សេវាកម្មដែលចាប់អារម្មណ៍",
+    f_msg:"សារ", f_send:"ផ្ញើសំណើ", f_note:"យើងនឹងឆ្លើយតបក្នុងរយៈពេល 1 ថ្ងៃធ្វើការ។",
+    f_ok:"សូមអរគុណ! (Form នេះជាគំរូ — ត្រូវភ្ជាប់ទៅអ៊ីមែល ឬប្រព័ន្ធពិតប្រាកដ)",
+    ft:"រក្សាសិទ្ធិគ្រប់យ៉ាង។"
+  },
+  en: {
+    nav_services:"Services", nav_about:"About", nav_process:"Process", nav_contact:"Contact",
+    hero_title:"A reliable logistics partner for high-volume distribution",
+    hero_sub:"SHD delivers warehousing, distribution and fleet management built on clear SOPs and data-driven decisions.",
+    hero_cta1:"Request a Quote", hero_cta2:"Our Services",
+    svc_eyebrow:"What we do", svc_title:"End-to-end logistics solutions",
+    svc_lead:"From inbound receiving to last-mile delivery, we manage every stage of your supply chain.",
+    svc1_t:"Warehousing", svc1_d:"Receiving, storage and pick/pack with layouts optimized for high throughput.",
+    svc2_t:"Transport & Fleet", svc2_d:"Route optimization and on-time delivery to your customers.",
+    svc3_t:"High-Volume Distribution", svc3_d:"Capacity for large order volumes with standardized processes and quality checks.",
+    svc4_t:"Inventory Management", svc4_d:"Stock tracking, cycle counts and KPI reporting to reduce shrinkage and stock-outs.",
+    ab_eyebrow:"About SHD", ab_title:"Operations built on systems and data",
+    ab_lead:"Sincere Heart Distribution focuses on operational efficiency, cost reduction and scalable systems that help your business grow.",
+    ab_c1:"Standard SOPs for every warehouse and transport process",
+    ab_c2:"Weekly KPI tracking and variance analysis",
+    ab_c3:"Trained teams with performance management",
+    ab_c4:"Continuous improvement to reduce cost",
+    kpi_title:"KPIs we track every day",
+    kpi1:"Order accuracy", kpi1v:"Order Accuracy",
+    kpi2:"On-time delivery", kpi2v:"OTD",
+    kpi3:"Inventory accuracy", kpi3v:"IRA",
+    kpi4:"Warehouse productivity", kpi4v:"Units / Hour",
+    pr_eyebrow:"How we work", pr_title:"A 4-step process",
+    pr1_t:"Receive", pr1_d:"Inspect, count and record inbound goods in the system.",
+    pr2_t:"Store", pr2_d:"Put away to assigned locations for efficient picking.",
+    pr3_t:"Fulfil", pr3_d:"Picking, packing and QC before dispatch.",
+    pr4_t:"Deliver", pr4_d:"Optimized routing and delivery to customer sites.",
+    ct_eyebrow:"Contact", ct_title:"Start working with SHD",
+    ct_lead:"Tell us what you need and our team will get back to you.",
+    ct_addr:"Phnom Penh, Kingdom of Cambodia", ct_hours:"Mon – Sat, 7:30 – 17:30",
+    f_name:"Name", f_company:"Company", f_phone:"Phone", f_service:"Service of interest",
+    f_msg:"Message", f_send:"Send Request", f_note:"We reply within 1 business day.",
+    f_ok:"Thank you! (This form is a demo — connect it to email or a real system)",
+    ft:"All rights reserved."
+  }
+};
+let lang = "km";
+function apply(){
+  document.documentElement.lang = lang;
+  document.body.classList.toggle("km", lang === "km");
+  document.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = T[lang][el.dataset.i18n] || ""; });
+  document.getElementById("langBtn").textContent = lang === "km" ? "EN" : "ខ្មែរ";
+}
+document.getElementById("langBtn").onclick = () => { lang = lang === "km" ? "en" : "km"; apply(); };
+document.getElementById("burger").onclick = () => document.getElementById("menu").classList.toggle("open");
+document.querySelectorAll(".menu a").forEach(a => a.onclick = () => document.getElementById("menu").classList.remove("open"));
+document.getElementById("quoteForm").onsubmit = e => { e.preventDefault(); document.getElementById("formNote").textContent = T[lang].f_ok; e.target.reset(); };
+document.getElementById("yr").textContent = new Date().getFullYear();
+apply();
+</script>
+</body>
+</html>
